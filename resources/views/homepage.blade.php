@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Trains</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,35 @@
 
 <body>
 
-    <h1>Home Page</h1>
+    <h1>Lista treni:</h1>
+
+    @foreach ($trains as $train)
+        
+        <ul>
+            <li>{{ $train->id }}</li>
+            <li>{{ $train->company }}</li>
+            <li>{{ $train->trip_day }}</li>
+            <li>{{ $train->departure_station }}</li>
+            <li>{{ $train->arrival_station }}</li>
+            <li>{{ $train->departure_time }}</li>
+            <li>{{ $train->arrival_time }}</li>
+            <li>{{ $train->train_number }}</li>
+            <li>{{ $train->carriages_number }}</li>
+
+            @if ($train->in_time == 0)
+                <li>In Orario</li>
+            @else
+                <li>In Ritardo</li>
+            @endif
+
+            @if ($train->deleted == 0)
+                <li>Attivo</li>
+            @else
+                <li>Cancellato</li>
+            @endif
+        </ul>
+
+    @endforeach
 
 </body>
 
