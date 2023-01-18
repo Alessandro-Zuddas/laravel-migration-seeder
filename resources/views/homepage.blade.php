@@ -22,7 +22,6 @@
     @foreach ($trains as $train)
         
         <ul>
-            <li>{{ $train->id }}</li>
             <li>{{ $train->company }}</li>
             <li>{{ $train->trip_day }}</li>
             <li>{{ $train->departure_station }}</li>
