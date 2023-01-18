@@ -24,10 +24,8 @@
         <ul>
             <li>{{ $train->company }}</li>
             <li>{{ $train->trip_day }}</li>
-            <li>{{ $train->departure_station }}</li>
-            <li>{{ $train->arrival_station }}</li>
-            <li>{{ $train->departure_time }}</li>
-            <li>{{ $train->arrival_time }}</li>
+            <li>{{ $train->departure_station }} - {{ $train->arrival_station }}</li>
+            <li>{{ $train->departure_time }} - {{ $train->arrival_time }}</li>
             <li>{{ $train->train_number }}</li>
             <li>{{ $train->carriages_number }}</li>
 
